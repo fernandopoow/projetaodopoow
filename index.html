@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> PÁGINA DO POOW </title>
+
+    <link rel="icon" type="image/x-icon" href="imagens/teres.png">
+
+    <link rel="shortlink" href="https://www.projetaçodopoow.com.br">
+
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+
+    <h1> PERFILZÃO DO POOW </h1>
+
+    <br><br>
+    <img id="img" src="imagens/cria.jpg" alt="funkeiro passando vergonha" width="250" height="260">
+
+    <br><br><br>
+    <h4> NOME: Poow
+      <br>
+      CIDADE: Lajeado RS
+      <br>
+      CONTATO: Vou ver se mainha deixa
+    </h4>
+
+    <h1 style="color:cyan;"> MEUS PROJETOS: </h1>
+
+    <br><br>
+    <h2> 1- IMC </h2>
+    <style>
+      h1 {
+        color: cyan
+      }
+
+      h2 {
+        color: cyan
+      }
+
+      h3 {
+        color: cyan
+      }
+
+      h4 {
+        color: cyan
+      }
+
+      h5 {
+        color: cyan
+      }
+
+      h6 {
+        color: cyan
+      }
+
+      #img {
+        border-radius: 5px;
+        border: 5px solid cyan;
+      }
+
+      body {
+        background-color:
+      }
+    </style>
+
+    <p> </p>
+    <h5> Altura ex: 1,80 </h5>
+    <p></p>
+
+    <input type="text" id="alturapessoa">
+
+    <p> </p>
+    <h5> Peso ex: 80 </h5>
+
+    <input type="text" id="pesopessoa">
+
+    <br><br>
+    <button id="calcular" type="button"> Calcule </button>
+
+    <div id="resultado-imc"></div>
+
+    <br>
+    <p> </p>
+    <h3> VEJA A INTERPRETAÇÃO DO IMC </h3>
+    <p></p>
+
+    <img id="img" src="imagens/obesidade.jpg" alt="gordos e magros" width="250" height="200">
+
+    <br>
+    <h4>
+      <li> IMC CLASSIFICAÇÕES </li>
+    </h4>
+
+    <br><br>
+    <li> MENOR QUE 18,5 MAGREZA 0 </li>
+
+    <br><br>
+    <li> ENTRE 18,5 E 24,9 NORMAL 0 </li>
+
+    <br><br>
+    <li> ENTRE 25,0 E 29,9 SOBREPESO I </li>
+
+    <br><br>
+    <li> ENTRE 30,0 E 39,9 OBESIDADE II </li>
+
+    <br><br>
+    <li> MAIOR QUE 40,0 OBESIDADE GRAVE III </li>
+
+
+
+    <script>
+      let botao = document.getElementById('calcular')
+
+      botao.onclick = function() {
+
+        let altura = document.getElementById('alturapessoa')
+        let peso = document.getElementById('pesopessoa')
+        let imc = peso.value / (altura.value * altura.value)
+        let resultadoIMC = 'Seu IMC: ' + imc.toFixed(2);
+        document.getElementById('resultado-imc').innerHTML = '<p>' + resultadoIMC + '</p>';
+      }
+    </script>
+
+
+
+    <br><br><br><br><br>
+    <h2> 2- CALCULADORA </h2>
+
+    <p> </p>
+    <h5> Digite um numero Ex: 1 </h5>
+    <p></p>
+
+    <input type="text" id="numeroum">
+
+    <p> </p>
+    <h5> Digite um numero Ex: 2 </h5>
+    <p></p>
+
+    <input type="text" id="numerodois">
+
+    <br><br><br>
+    <button id="mais" type="button"> + </button>
+    <button id="menos" type="button"> - </button>
+    <button id="vezes" type="button"> x </button>
+    <button id="dividido" type="button"> / </button>
+
+    <br><br><br>
+    <input id="calc3" type="text" "resultado"="">
+
+    <div id="resulti"></div>
+
+    <script>
+      document.getElementById('mais').onclick = function() {
+        let numeroum = parseFloat(document.getElementById('numeroum').value);
+        let numerodois = parseFloat(document.getElementById('numerodois').value);
+        let result = numeroum + numerodois;
+        document.getElementById('calc3').value = result;
+      };
+      document.getElementById('menos').onclick = function() {
+        let numeroum = parseFloat(document.getElementById('numeroum').value);
+        let numerodois = parseFloat(document.getElementById('numerodois').value);
+        let result = numeroum - numerodois;
+        document.getElementById('calc3').value = result;
+      };
+      document.getElementById('vezes').onclick = function() {
+        let numeroum = parseFloat(document.getElementById('numeroum').value);
+        let numerodois = parseFloat(document.getElementById('numerodois').value);
+        let result = numeroum * numerodois;
+        document.getElementById('calc3').value = result;
+      };
+      document.getElementById('dividido').onclick = function() {
+        let numeroum = parseFloat(document.getElementById('numeroum').value);
+        let numerodois = parseFloat(document.getElementById('numerodois').value);
+        let result = numeroum / numerodois;
+        document.getElementById('calc3').value = result;
+      };
+    </script>
+
+
+    <br><br><br><br>
+    <h2> 3- LOGIN </h2>
+
+    <h5> Digite seu login Ex: poow </h5>
+
+    <input type="text" id="emaildologin">
+
+    <h5> Digite sua senha Ex: poow</h5>
+
+    <input type="text" id="senhadologin">
+
+    <br><br>
+    <button id="veric" type="button"> verificar </button>
+
+    <div id="veric"></div>
+
+    <script>
+      document.getElementById('veric').onclick = function() {
+        let usuario = 'Poowzinh01';
+        let senha = 'poow';
+        let tentativa = document.getElementById('emaildologin').value;
+        let tentativa2 = document.getElementById('senhadologin').value;
+
+        if (tentativa == usuario && tentativa2 == senha) {
+          alert('Usuário e senhas corretos!')
+        } else if (tentativa != usuario && tentativa2 == senha) {
+          alert('Seu usuário está incorreto!')
+        } else if (tentativa == usuario && tentativa2 != senha) {
+          alert('Sua senha está incorreta!')
+        } else {
+          alert('TUDO ESTÁ INCORRETO!')
+        }
+      }
+    </script>
+
+    <br><br><br><br>
+    <h2> 4- DIGITAÇÃO DE TEXTO </h2>
+
+    <h4>Mensagem</h4>
+    <textarea id="resumo" rows="4" cols="50"></textarea>
+
+
+    <p id="qtde">Quantidade: </p>
+
+
+    <button onclick="limpar()"> Limpar</button>
+
+
+    <script>
+      let qtde = document.getElementById('qtde');
+      let inputElement = document.getElementById('resumo');
+
+
+      inputElement.addEventListener('keyup', function(event) {
+        qtde.innerHTML = 'Quantidade: ' + inputElement.value.length
+      });
+
+
+      function limpar() {
+        inputElement.value = ''
+        qtde.innerHTML = 'Quantidade: '
+      }
+    </script>
+
+
+
+  </body>
+
+</html>
